@@ -1,0 +1,13 @@
+﻿<Window x:Class="SkolaJezikaWPF.Windows.JeziciWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="JeziciWindow" Height="400" Width="400">
+    <Grid>
+        <DataGrid Name="dgJezici" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.496,-1.972" Height="349" Width="292" SelectionChanged="dgJezici_SelectionChanged"/>
+        <Button Name="bDodaj" Content="Dodavanje" HorizontalAlignment="Left" Margin="307,264,0,0" VerticalAlignment="Top" Width="75" Click="bDodaj_Click"/>
+        <Button Name="bIzmeni" Content="Izmena" HorizontalAlignment="Left" Margin="307,289,0,0" VerticalAlignment="Top" Width="75" Click="bIzmeni_Click"/>
+        <Button Name="bObrisi" Content="Brisanje" HorizontalAlignment="Left" Margin="307,314,0,0" VerticalAlignment="Top" Width="75" Click="bObrisi_Click"/>
+        <Button Name="bZatvori" Content="Zatvori" HorizontalAlignment="Left" Margin="307,339,0,0" VerticalAlignment="Top" Width="75" Click="bZatvori_Click"/>
+
+    </Grid>
+</Window>

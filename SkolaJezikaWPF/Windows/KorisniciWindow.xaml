@@ -1,0 +1,56 @@
+﻿<Window x:Class="SkolaJezikaWPF.KorisniciWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Korisnici" Height="400" Width="400">
+    <Grid>
+        <Button Name="bDodaj" Content="Dodavanje" HorizontalAlignment="Left" Margin="307,263,0,0" VerticalAlignment="Top" Width="75" Click="bDodaj_Click"/>
+        <Button Name="bIzmeni" Content="Izmena" HorizontalAlignment="Left" Margin="307,288,0,0" VerticalAlignment="Top" Width="75" Click="bIzmeni_Click"/>
+        <Button Name="bObrisi" Content="Brisanje" HorizontalAlignment="Left" Margin="307,313,0,0" VerticalAlignment="Top" Width="75" Click="bObrisi_Click"/>
+        <Button Name="bZatvori" Content="Zatvori" HorizontalAlignment="Left" Margin="307,338,0,0" VerticalAlignment="Top" Width="75" Click="bZatvori_Click"/>
+        <DataGrid Name="dgKorisnici" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="187" Width="233" SelectionChanged="dgKorisnici_SelectionChanged"/>
+        <GroupBox Header="Detalji korisnika" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.38,-0.13" Height="140" Width="233"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,245,0,0" TextWrapping="Wrap" Text="Korisnicko ime" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,276,0,0" TextWrapping="Wrap" Text="Lozinka" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="114,245,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dgKorisnici, Path=SelectedItem.KorisnickoIme}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="114,276,0,0" TextWrapping="Wrap" Text="{Binding ElementName=dgKorisnici, Path=SelectedItem.Lozinka}" VerticalAlignment="Top" Width="120"/>
+        <Expander Header="Pretraga" HorizontalAlignment="Left" Margin="262,28,0,0" VerticalAlignment="Top" Height="187" Width="120" IsExpanded="True">
+            <Grid Background="#FFE5E5E5" Height="164">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unesite pojam" Width="118" Height="28" Margin="0,10,0,126"/>
+                <TextBox Name="tbPretragaImena" HorizontalAlignment="Left" Height="22" Margin="0,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="118" TextChanged="tbPretragaImena_TextChanged"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0,65,0,0" TextWrapping="Wrap" Text="Pretrazi po" VerticalAlignment="Top"/>
+                <RadioButton Name="rbIme" Content="Imenu" HorizontalAlignment="Left" Margin="9,90,0,0" VerticalAlignment="Top" Click="rbIme_Click"/>
+                <RadioButton Name="rbPrezime" Content="Prezimenu" HorizontalAlignment="Left" Margin="9,110,0,0" VerticalAlignment="Top" Click="rbIme_Click"/>
+                <RadioButton Name="rbJMBG" Content="JMBG" HorizontalAlignment="Left" Margin="9,130,0,0" VerticalAlignment="Top" Click="rbIme_Click"/>
+
+            </Grid>
+        </Expander>
+        <Menu HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="Korisnici">
+                <MenuItem Header="Dodavanje" Click="bDodaj_Click">
+                    <MenuItem.Icon>
+                        <Image Source="../img/Users-Add-User-icon.png" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Tipovi">
+                    <MenuItem Name="bDodajTip" Header="Dodaj" Click="bDodajTip_Click">
+                        
+                    </MenuItem>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Izlaz" Click="bZatvori_Click">
+                    <MenuItem.Icon>
+                        <Image Source="../img/logout.png" Height="16"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Pregled">
+                <MenuItem Header="Sortiraj po imenu" IsCheckable="True" IsChecked="True"/>
+                <MenuItem Header="Sortiraj po prezimenu" IsCheckable="True"/>
+                <MenuItem Header="Sortiraj po jmbg" IsCheckable="True"/>
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Name="miOProgramu" Header="O programu" Click="miOProgramu_Click"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

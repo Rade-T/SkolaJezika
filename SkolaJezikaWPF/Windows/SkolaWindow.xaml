@@ -1,0 +1,26 @@
+﻿<Window x:Class="SkolaJezikaWPF.Windows.SkolaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SkolaWindow" Height="300" Width="300">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Naziv:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="Adresa:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Text="Internet adresa:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Telefon:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,115,0,0" TextWrapping="Wrap" Text="Ziro racun:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,136,0,0" TextWrapping="Wrap" Text="Maticni broj:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,157,0,0" TextWrapping="Wrap" Text="PIB:" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=Naziv}" HorizontalAlignment="Left" Margin="42,0,0,239" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=Adresa}" HorizontalAlignment="Left" Margin="49,26,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=InternetAdresa}" HorizontalAlignment="Left" Margin="97,47,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=Email}" HorizontalAlignment="Left" Margin="46,68,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=Telefon}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,89,0,0"/>
+        <Label Content="{Binding Path=ZiroRacun}" HorizontalAlignment="Left" Margin="71,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=MaticniBroj}" HorizontalAlignment="Left" Margin="81,131,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding Path=PIB}" HorizontalAlignment="Left" Margin="34,152,0,0" VerticalAlignment="Top"/>
+        <Button Name="bZatvori" Content="Zatvori" HorizontalAlignment="Left" Margin="207,238,0,0" VerticalAlignment="Top" Width="75" Click="bZatvori_Click"/>
+        <Button Name="bIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="127,238,0,0" VerticalAlignment="Top" Width="75" Click="bIzmeni_Click"/>
+
+    </Grid>
+</Window>

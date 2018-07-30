@@ -1,0 +1,16 @@
+﻿<Window x:Class="SkolaJezikaWPF.Windows.UceniciKursa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UceniciKursa" Height="400" Width="433">
+    <Grid>
+        <Button Name="bDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="175,31,0,0" VerticalAlignment="Top" Width="75" Click="bDodaj_Click"/>
+        <Button Name="bIzbaci" Content="Izbaci" HorizontalAlignment="Left" Margin="175,56,0,0" VerticalAlignment="Top" Width="75" Click="bIzbaci_Click"/>
+        <Button Name="bOdustani" Content="Odustani" HorizontalAlignment="Left" Margin="175,339,0,0" VerticalAlignment="Top" Width="75" Click="bOdustani_Click"/>
+        <Button Name="bSacuvaj" Content="Sacuvaj" HorizontalAlignment="Left" Margin="175,314,0,0" VerticalAlignment="Top" Width="75" Click="bSacuvaj_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Ucenici kursa" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="255,10,0,0" TextWrapping="Wrap" Text="Svi ucenici" VerticalAlignment="Top"/>
+        <DataGrid Name="dgUceniciKursa" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Height="328" Width="160"/>
+        <DataGrid Name="dgSviUcenici" HorizontalAlignment="Left" Margin="255,31,0,0" VerticalAlignment="Top" Height="328" Width="160"/>
+
+    </Grid>
+</Window>
